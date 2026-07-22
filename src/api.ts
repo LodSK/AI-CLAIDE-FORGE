@@ -1,7 +1,6 @@
 // React API Wrapper Service for DevLaunch AI SaaS
 
-const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:3000/api";
+const API_BASE = "https://ai-claide-forge.onrender.com/api";
 
 export class ApiService {
   private static getHeaders(token?: string): HeadersInit {
