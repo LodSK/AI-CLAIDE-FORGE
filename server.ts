@@ -8,7 +8,11 @@ import { db } from "./server/db/db";
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = Number(process.env.PORT) || 3000;
+
+app.listen(PORT, () => {
+  console.log(`[DevLaunch Service] Running and routing traffic on http://localhost:${PORT}`);
+});
 
   // Print startup database diagnostic
   const dbLoaded = await db.ping();
